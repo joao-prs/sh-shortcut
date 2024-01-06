@@ -1,2 +1,2 @@
 # sh-shortcut
-script ssh apenas
+script sh apenas
