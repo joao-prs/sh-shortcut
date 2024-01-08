@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "#################"
+echo "-----------------"
 echo "digite uma senha:"
-echo "#################"
+echo "-----------------"
 read mypass
 PASSWORD=$mypass
 SALT="$(openssl rand -base64 3)"
