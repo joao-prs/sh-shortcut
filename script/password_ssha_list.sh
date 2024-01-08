@@ -1,7 +1,8 @@
 #!/bin/bash
-
+amarelo='\033[0;33m'
+reset='\033[0m'
 echo "-----------------"
-echo "digite uma senha:"
+echo -e "digite uma ${amarelo}senha${reset}:"
 echo "-----------------"
 read mypass
 PASSWORD=$mypass
