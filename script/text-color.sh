@@ -4,12 +4,14 @@
 vermelho='\033[0;31m'
 verde='\033[0;32m'
 amarelo='\033[0;33m'
+b_vermelho='\033[41m'
 reset='\033[0m' # retornar a cor original
 
 # Imprimir texto colorido
 echo -e "Texto em ${vermelho}vermelho${reset}"
 echo -e "Texto em ${verde}verde${reset}"
 echo -e "Texto em ${amarelo}amarelo${reset}"
+echo -e "Texto em ${amarelo}${b_vermelho}amarelo com fundo vermelho${reset}"
 
 # Color		                 Foreground		 Background
 # Default		                  \033[39m		\033[49m	
