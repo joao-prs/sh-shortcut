@@ -5,7 +5,8 @@ repositorios_dir="$(pwd)"
 
 #   colors
 VML='\033[0;31m'
-AML='\033[0;33m'
+AML='\033[93m'
+ROX='\033[95m'
 VRD='\033[0;32m'
 RST='\033[0m'
 
@@ -22,11 +23,15 @@ if [ -d "$repositorios_dir" ]; then
 
         # Loop sobre todas as branches
         for branch in $(git branch -l | cut -c 3-); do
-            # Faz pull em cada branch
-            git checkout "$branch"
+          # Checa se ha alterações no repositorio
+          if git status --porcelain | grep -q .; then
+            # Se tiver, entao ele sobe elas
             git add .
             git commit -m '🤖 push automático 🤖'
             git push
+          else
+            echo -e "${ROX}sem alterações.${RST}"
+          fi
         done
 
         # Retorne
@@ -34,8 +39,8 @@ if [ -d "$repositorios_dir" ]; then
     done
 
     #   retorne com êxito
-    echo -e "[${VRD}SUCESSO${RST}] Envio concluída."
+    echo -e "${VRD}Envio concluído com sucesso!${RST}"
 else
     #   retorne com falha
-    echo -e "[${VML}FALHA${RST}] O diretório dos repositórios não foi encontrado."
+    echo -e "${VML}O diretório dos repositórios não foi encontrado.${RST}"
 fi

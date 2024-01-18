@@ -4,7 +4,8 @@ repositorios_dir="$(pwd)"
 
 # Cores
 VML='\033[0;31m'
-AML='\033[0;33m'
+AML='\033[93m'
+ROX='\033[95m'
 VRD='\033[0;32m'
 RST='\033[0m'
 
@@ -31,8 +32,8 @@ if [ -d "$repositorios_dir" ]; then
     done
 
     # Retorne com êxito
-    echo -e "[${VRD}SUCESSO${RST}] Atualização concluída."
+    echo -e "${VRD}Atualização concluída.${RST}"
 else
     # Retorne com falha
-    echo -e "[${VML}FALHA${RST}] O diretório dos repositórios não foi encontrado."
+    echo -e "${VML}O diretório dos repositórios não foi encontrado.${RST}"
 fi
