@@ -18,7 +18,7 @@ if [ -d "$repositorios_dir" ]; then
     for repo in */; do
         # Executar dentro de cada repo
         cd "$repo"
-        echo -e "Atualizando repositório:${AML} ${repo%/}${RST}"
+        echo -e "${ROX}Atualizando repositório:${AML} ${repo%/}${RST}"
 
         # Loop sobre todas as branches
         for branch in $(git branch -l | cut -c 3-); do

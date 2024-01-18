@@ -19,7 +19,7 @@ if [ -d "$repositorios_dir" ]; then
     for repo in */; do
         # Executar dentro de cada repo
         cd "$repo"
-        echo -e "Atualizando repositório:${AML} ${repo%/}${RST}"
+        echo -e "${ROX}Atualizando repositório:${AML} ${repo%/}${RST}"
 
         # Loop sobre todas as branches
         for branch in $(git branch -l | cut -c 3-); do
@@ -30,7 +30,7 @@ if [ -d "$repositorios_dir" ]; then
             git commit -m '🤖 push automático 🤖'
             git push
           else
-            echo -e "${ROX}sem alterações.${RST}"
+            echo -e "sem alterações."
           fi
         done
 
