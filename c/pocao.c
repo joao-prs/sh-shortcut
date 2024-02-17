@@ -3,17 +3,15 @@
 #include <time.h>
 
 int main() {
+
     /*
-        Criar um sistema de temperatura onde tenha uma margem
-        aceitavel de sobrevivencia, e margens onde pode ser
-        toleravel mas nao habitual, e margens de temperatura
-        critica com riscos de danos por calor ou frio.
-        
-         0      = frio demais
-         1 a 10 = frio toleravel 
-        11 a 40 = normal ou ambiente
-        41 a 50 = quente toleravel 
-        51+     = quente demais.
+        suponha um cenario onde voce precisa beber um
+        frasco de pocao para recuperar sua vida, porem
+        beber esta pocao tambem pode lhe custar caro.
+        Em sistemas de RPG como D&D5, apenas o ato de
+        beber uma pocao pode fazer com que voce precise
+        jogar um dado para saber se aquela pocao vai de
+        fato recuperar sua vida ou tirar ela.
 
         O valor da temperatura é gerado aleatoriamente apenas
         para testarmos possiveis resultados (e tambem porque
@@ -45,5 +43,6 @@ int main() {
     else {
         printf("quente demais!!\n");
     }
+
     return 0;
 }
