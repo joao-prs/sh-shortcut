@@ -14,32 +14,36 @@ int main() {
         11 a 40 = normal ou ambiente
         41 a 50 = quente toleravel 
         51+     = quente demais.
+
+        O valor da temperatura é gerado aleatoriamente apenas
+        para testarmos possiveis resultados (e tambem porque
+        nao quero perder meu tempo usando scanf para escolher
+        um valor para meu pequeno teste)
                                                     - joao-prs
     */
 
     // pre
     srand(time(NULL));
     
-    // numero aleatório entre -30 e 60
-    int tempt = rand() % 91 - 30;
-
+    // numero aleatório entre -10 e 60
+    int tempt = rand() % 71 - 10;
 
     printf("temperatura: %d\n", tempt);
 
     if (tempt <= 0) {
-        printf("frio demais\n");
+        printf("frio demais!!\n");
     }
     else if (tempt >= 1 && tempt <= 10) {
-        printf("frio toleravel\n");
+        printf("frio toleravel!\n");
     }
     else if (tempt >= 11 && tempt <= 40) {
-        printf("normal ou ambiente\n");
+        printf("normal ou ambiente.\n");
     }
     else if (tempt >= 41 && tempt <= 50) {
-        printf("quente toleravel\n");
+        printf("quente toleravel!\n");
     }
     else {
-        printf("quente demais\n");
+        printf("quente demais!!\n");
     }
     return 0;
 }
