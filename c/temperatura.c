@@ -21,11 +21,9 @@ int main() {
         um valor para meu pequeno teste)
             - joao-prs
     */
-
-    // pre
-    srand(time(NULL));
     
     // numero aleatório entre -10 e 60
+    srand(time(NULL));
     int tempt = rand() % 71 - 10;
 
     printf("temperatura: %d\n", tempt);
