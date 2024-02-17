@@ -41,6 +41,5 @@ int main() {
     else {
         printf("quente demais\n");
     }
-
     return 0;
 }
