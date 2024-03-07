@@ -1,9 +1,11 @@
 #!/bin/bash
+# apresentação
 amarelo='\033[0;33m'
 reset='\033[0m'
 echo "-----------------"
 echo -e "digite uma ${amarelo}senha${reset}:"
 echo "-----------------"
+# entrada
 read mypass
 PASSWORD=$mypass
 SALT="$(openssl rand -base64 3)"
