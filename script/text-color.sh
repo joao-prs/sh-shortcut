@@ -1,17 +1,51 @@
 #!/bin/bash
 
 # Definir códigos de escape ANSI para cores
-vermelho='\033[0;31m'
-verde='\033[0;32m'
-amarelo='\033[0;33m'
-b_vermelho='\033[41m'
+
 reset='\033[0m' # retornar a cor original
 
-# Imprimir texto colorido
-echo -e "Texto em ${vermelho}vermelho${reset}"
-echo -e "Texto em ${verde}verde${reset}"
-echo -e "Texto em ${amarelo}amarelo${reset}"
-echo -e "Texto em ${amarelo}${b_vermelho}amarelo com fundo vermelho${reset}"
+# Foreground
+Black="\033[30m"
+Dark_red="\033[31m"
+Dark_green="\033[32m"
+Dark_yellow="\033[33m"
+Dark_blue="\033[34m"
+Dark_magenta="\033[35m"
+Dark_cyan="\033[36m"
+Light_gray="\033[37m"
+
+Default="\033[39m"
+
+Dark_gray="\033[90m"
+Red="\033[91m"
+Green="\033[92m"
+Orange="\033[93m"
+Blue="\033[94m"
+Magenta="\033[95m"
+Cyan="\033[96m"
+White="\033[97m"	
+
+echo -e "color ${Black}Black${reset}"
+echo -e "color ${Dark_red}Dark_red${reset}"
+echo -e "color ${Dark_green}Dark_green${reset}"
+echo -e "color ${Dark_yellow}Dark_yellow${reset}"
+echo -e "color ${Dark_blue}Dark_blue${reset}"
+echo -e "color ${Dark_magenta}Dark_magenta${reset}"
+echo -e "color ${Dark_cyan}Dark_cyan${reset}"
+echo -e "color ${Dark_gray}Dark_gray${reset}"
+
+echo -e "color ${Light_gray}Light_gray${reset}"
+echo -e "color ${Red}Red${reset}"
+echo -e "color ${Green}Green${reset}"
+echo -e "color ${Orange}Orange${reset}"
+echo -e "color ${Blue}Blue${reset}"
+echo -e "color ${Magenta}Magenta${reset}"
+echo -e "color ${Cyan}Cyan${reset}"
+echo -e "color ${White}White${reset}"
+
+# Background
+
+
 
 # Color		                 Foreground		 Background
 
