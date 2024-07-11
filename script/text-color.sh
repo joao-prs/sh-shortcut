@@ -142,3 +142,11 @@ echo -e "color ${b_White}White${reset}"
 # Light purple      \033[105m
 # Teal 	            \033[106m
 # White 	        \033[107m
+
+
+# sh custom example
+
+#PS1='[\u@\[\033[44m\]\h\[\e[0m\] \W]\$ '
+#PS1='[\u@\[\e[1;34m\]\h\[\e[0m\] \W]\$ '
+#PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\\$\[\e[m\] "
+#PS1="\[\e[34m\][\[\e[m\]\\u@\[\e[34m\]\h:\[\e[m\]\w\\[\e[34m\]]\\$\[\e[m\] "
