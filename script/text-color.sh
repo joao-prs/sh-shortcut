@@ -31,3 +31,24 @@ echo -e "Texto em ${amarelo}${b_vermelho}amarelo com fundo vermelho${reset}"
 # Magenta		                  \033[95m		\033[105m	
 # Cyan		                    \033[96m		\033[106m	
 # White		                    \033[97m		\033[107m
+
+# Color 	Foreground 	Backgroun
+#Black 	\033[30m 	\033[40m
+#Red 	\033[31m 	\033[41m
+#Green 	\033[32m 	\033[42m
+#Orange 	\033[33m 	\033[43m
+#Blue 	\033[34m 	\033[44m
+#Magenta 	\033[35m 	\033[45m
+#Cyan 	\033[36m 	\033[46m
+#Light gray 	\033[37m 	\033[47m
+#Fallback to distro's default 	\033[39m 	\033[49m
+
+#Color  	Backgroun
+#Dark gray 	\033[100m
+#Light red 	\033[101m
+#Light green 	\033[102m
+#Yellow 	\033[103m
+#Light blue 	\033[104m
+#Light purple 	\033[105m
+#Teal 	\033[106m
+#White 	\033[107m
