@@ -3,7 +3,7 @@
 # Função para exibir a ajuda
 mostrar_ajuda() {
     echo "Uso:"
-    echo "  $0 -d <diretorio>"
+    echo "  $0 -d <PASTA>"
     echo ""
     exit 1
 }
@@ -17,7 +17,7 @@ fi
 while getopts "d:" opt; do
   case ${opt} in
     d )
-      DIRETORIO=$OPTARG
+      PASTA=$OPTARG
       ;;
     \? )
       mostrar_ajuda
@@ -26,11 +26,11 @@ while getopts "d:" opt; do
 done
 
 # Verifica se o diretório existe
-if [ -d "$DIRETORIO" ]; then
-    echo "O diretório informado é: $DIRETORIO"
-    find $DIRETORIO -type f -exec shred -uvz -n6 {} \;
-    rm -rf $DIRETORIO
+if [ -d "$PASTA" ]; then
+    echo "O diretório informado é: $PASTA"
+    find $PASTA -type f -exec shred -uvz -n9 {} \;
+    rm -rf $PASTA
 else
-    echo "Erro: O diretório $DIRETORIO não existe."
+    echo "Erro: O diretório $PASTA não existe."
     exit 1
 fi
