@@ -12,12 +12,12 @@ USER_NAME="operador"
 #             sem home,         sem shell de login  sem grupo específico    nome dele
 sudo useradd  --no-create-home  --shell             /usr/sbin/nologin       "$USER_NAME"
 ```
-dê a ele permissões de apenas execução do que lhe foi programado, no exemplo o programa é `/opt/scripts/meuscript.sh`, mas pode ser qualquer outro programa de sua escolha e caminho:
+dê a ele permissões de apenas execução do que lhe foi programado, no exemplo o programa é `/opt/scripts/loop.sh`, mas pode ser qualquer outro programa de sua escolha e caminho:
 ```sh
-sudo chown root:operador /opt/scripts/meuscript.sh
-sudo chmod 750 /opt/scripts/meuscript.sh
+sudo chown root:operador /opt/scripts/loop.sh
+sudo chmod 750 /opt/scripts/loop.sh
 ```
-
+> o script `loop.sh` é o mesmo na pasta desse readme
 
 caso deseje remove-lo por inutilidade, aqui outro:
 ```sh
