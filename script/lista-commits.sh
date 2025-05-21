@@ -7,8 +7,8 @@
 read -p "usuario: " _user
 _hash_size=10
 
-git log --author="${_user}" --pretty=format:"%h %s" | while read line; do
+git log --author="${_user}" --pretty=format:"%H %s" | while read line; do
     hash=$(echo "$line" | awk '{print $1}' | sed -E "s/^(.{$_hash_size}).*/\1/; s/ (.*)/ \1/")
     msg=$(echo "$line" | cut -d' ' -f2-)
-    echo "$hash \"$msg\""
+    echo "$hash  $msg"
 done
