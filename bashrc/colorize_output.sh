@@ -11,6 +11,7 @@
 #   ele deverá atribuir cores nas palavras especificas abaixo.
 
 # updt  -- amarelo
+# fix   -- amarelo
 # add   -- verde
 # feat  -- verde
 # del   -- vermelho
@@ -18,6 +19,7 @@
 colorize_output() {
     "$@" | sed \
         -e 's/\bupdt\b/\o033[1;33m&\o033[0m/g' \
+        -e 's/\bfix\b/\o033[1;33m&\o033[0m/g' \
         -e 's/\badd\b/\o033[1;32m&\o033[0m/g' \
         -e 's/\bfeat\b/\o033[1;32m&\o033[0m/g' \
         -e 's/\bdel\b/\o033[1;31m&\o033[0m/g'
