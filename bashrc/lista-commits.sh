@@ -14,7 +14,7 @@ list_commit_by_user() {
     git log --author="${_user}" --pretty=format:"%H %s" | while read line; do
         hash=$(echo "$line" | awk '{print $1}' | sed -E "s/^(.{$_hash_size}).*/\1/; s/ (.*)/ \1/")
         msg=$(echo "$line" | cut -d' ' -f2-)
-        echo "$hash  $msg"
+        echo "\033[1;96m$hash\033[0m  $msg"
     done;
 }
 alias commits="list_commit_by_user"
@@ -32,7 +32,7 @@ list_commit_by_user() {
         git log --author="${_user}" --pretty=format:"%H %s" | while read line; do
             hash=$(echo "$line" | awk '{print $1}' | sed -E "s/^(.{$_hash_size}).*/\1/; s/ (.*)/ \1/")
             msg=$(echo "$line" | cut -d' ' -f2-)
-            echo "$hash  $msg"
+            echo "\033[1;96m$hash\033[0m  $msg"
         done;
     else
         echo "HELP: list_commit <usuario>"
