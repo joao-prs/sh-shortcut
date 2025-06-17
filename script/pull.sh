@@ -3,12 +3,14 @@
 repositorios_dir="$(pwd)"
 
 # Cores
+AZU="\033[94m"
 VML='\033[0;31m'
 AML='\033[93m'
 ROX='\033[95m'
 VRD='\033[0;32m'
 RST='\033[0m'
 
+echo -e "\n${AZU}=== recebendo alterações ===${RST}\n"
 # Verifica se o diretório existe
 if [ -d "$repositorios_dir" ]; then
     # Navega até o diretório dos repositórios
@@ -36,4 +38,3 @@ if [ -d "$repositorios_dir" ]; then
 else
     # Retorne com falha
     echo -e "${VML}O diretório dos repositórios não foi encontrado.${RST}"
-fi
