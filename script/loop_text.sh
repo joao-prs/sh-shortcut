@@ -21,7 +21,7 @@ funcao_3() {
     echo -e ""
     for ((i=1; i<=$valor ; i++)); do
         random_char=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c1)
-        echo -n "$random_char"   
+        echo -n "$random_char"    
     done
     echo -e "\n"
 }
