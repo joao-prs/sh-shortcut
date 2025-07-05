@@ -4,8 +4,13 @@
 #  .bashrc
 #---------
 
-list_commit_by_user() {
-    if [ -n "$1" ]; then
+
+commits() {
+    if [ "$1" == "--help" ]; then
+        echo "HELP:"
+        echo "commits <usuario>"
+    fi
+	if [ -n "$1" ]; then
         _user="$1"
     else
         read -p "usuario: " _user
@@ -14,10 +19,11 @@ list_commit_by_user() {
     git log --author="${_user}" --pretty=format:"%H %s" | while read line; do
         hash=$(echo "$line" | awk '{print $1}' | sed -E "s/^(.{$_hash_size}).*/\1/; s/ (.*)/ \1/")
         msg=$(echo "$line" | cut -d' ' -f2-)
-        echo "\033[1;96m$hash\033[0m  $msg"
-    done;
+        echo -e "\033[1;96m$hash\033[0m  $msg"
+    done
+	if
 }
-alias commits="list_commit_by_user"
+
 
 
 
@@ -25,7 +31,7 @@ alias commits="list_commit_by_user"
 #  .zshrc
 #---------
 
-list_commit_by_user() {
+commits() {
     if [ -n "$1" ]; then
         _user="$1"
         _hash_size=15;
@@ -35,7 +41,6 @@ list_commit_by_user() {
             echo "\033[1;96m$hash\033[0m  $msg"
         done;
     else
-        echo "HELP: list_commit <usuario>"
+        echo "HELP: commits <usuario>"
     fi
 }
-alias commits="list_commit_by_user"
